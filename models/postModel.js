@@ -19,6 +19,10 @@ const postSchema = new Schema({
     collections: {
         type: Array,
         required: false
+    },
+    user_id: {
+        type: String,
+        required: true
     }
 }, { timestamps: true });
 

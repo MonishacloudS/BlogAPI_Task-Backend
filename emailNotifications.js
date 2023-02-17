@@ -6,17 +6,17 @@ const User = require('./models/userModel.js');
 function sendNotificationEmail(to, subject, body) {
     // Create a transporter object to send emails
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: 'outlook',
       auth: {
-        user: 'monishanode@gmail.com',
-        pass: '7401057318'
+        user: 'monishanode123@outlook.com',
+        pass: 'Moni@7122001'
       }
     });
   
     // Define email options
     const mailOptions = {
-      from: 'monishanode@gmail.com',
-      to: to,
+      from: 'monishanode123@outlook.com',
+      to: [User],
       subject: subject,
       text: body
     };

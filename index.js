@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const multer = require('multer')
+const multer = require('multer');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
