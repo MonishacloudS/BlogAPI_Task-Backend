@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const multer = require('multer')
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -14,6 +15,8 @@ const authRoute = require('./routes/auth.js');
 const userRoute = require('./routes/users.js');
 const postRoute = require('./routes/posts.js');
 const collectionRoute = require('./routes/collections.js');
+
+
 
 // middleware
 app.use(express.json())
@@ -72,7 +75,9 @@ const storage = multer.diskStorage({
 
 
 
-
-
   
+
+
+
+
 
