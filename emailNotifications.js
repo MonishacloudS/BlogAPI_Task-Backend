@@ -12,11 +12,13 @@ function sendNotificationEmail(to, subject, body) {
         pass: 'Moni@7122001'
       }
     });
+
+    const user = User.user
   
     // Define email options
     const mailOptions = {
       from: 'monishanode123@outlook.com',
-      to: [User],
+      to: 'vickynode@gmail.com',
       subject: subject,
       text: body
     };

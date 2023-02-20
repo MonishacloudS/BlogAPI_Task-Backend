@@ -17,7 +17,7 @@ const postSchema = new Schema({
         required: false,
     },
     collections: {
-        type: Array,
+        type: String,
         required: false
     },
     
