@@ -20,10 +20,7 @@ const postSchema = new Schema({
         type: Array,
         required: false
     },
-    user_id: {
-        type: String,
-        required: true
-    }
+    
 }, { timestamps: true });
 
 

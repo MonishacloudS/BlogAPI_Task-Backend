@@ -84,7 +84,7 @@ router.post("/", requireAuth, async (req, res) => {
         posts = await Post.find({ username });
       } else if (colName) {
         posts = await Post.find({
-          categories: {
+          collections: {
             $in: [colName],
           },
         });
