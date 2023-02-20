@@ -12,17 +12,24 @@ const postSchema = new Schema({
         type: String,
         required: true,
     },
-    image: {
+    image_url: {
         type: String,
-        required: false,
+        required: true,
     },
     category: {
         type: String,
         required: true
     },
     
+
+
 }, { timestamps: true });
 
 
 
 module.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('MusicPost', postSchema);
+module.exports = mongoose.model('FoodPost', postSchema);
+module.exports = mongoose.model('TravelPost', postSchema);
+module.exports = mongoose.model('NaturePost', postSchema);
+module.exports = mongoose.model('LifestylePost', postSchema);
