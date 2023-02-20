@@ -12,7 +12,7 @@ router.use(requireAuth)
 router.post('/', (req, res) => {
   const { title, content, category } = req.body;
  
-  const newPost = new BlogPost({
+  const newPost = new Post({
     title,
     content,
     category
