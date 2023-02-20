@@ -12,11 +12,11 @@ router.use(requireAuth)
 router.post("/", requireAuth, async (req, res) => {
     const newPost = new Post(req.body);
     try {
-      const savedPost = await newPost.save();
+      // const savedPost = await newPost.save();
       const newFoodPost=new FoodPost(newPost);
       newFoodPost.save();
 
-      res.status(200).json({ savedPost, sendNotificationEmail });
+      res.status(200).json({ newFoodPost, sendNotificationEmail });
     } catch (err) {
       res.status(500).json(err);
     }
