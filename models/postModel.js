@@ -18,7 +18,7 @@ const postSchema = new Schema({
     },
     category: {
         type: String,
-        required: false
+        required: true
     },
     
 }, { timestamps: true });
