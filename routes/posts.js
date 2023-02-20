@@ -10,11 +10,25 @@ router.use(requireAuth)
 
 //CREATE POST
 router.post("/", requireAuth, async (req, res) => {
-    const newPost = new Post(req.body);
+  const { title, content, category } = req.body;
+  const newPost = new Post({
+    title,
+    content,
+    category
+  });
+  // const newPost = new Post(req.body);
+
     try {
       // const savedPost = await newPost.save();
-      const newFoodPost=new FoodPost(newPost);
+      switch (category){
+        case 'food':
+          const newFoodPost=new FoodPost(newPost);
       newFoodPost.save();
+         break;
+         default:
+         newPost.save();
+      }
+      
 
       res.status(200).json({ newFoodPost, sendNotificationEmail });
     } catch (err) {

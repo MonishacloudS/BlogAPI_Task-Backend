@@ -16,7 +16,7 @@ const postSchema = new Schema({
         type: String,
         required: false,
     },
-    collections: {
+    category: {
         type: String,
         required: false
     },
