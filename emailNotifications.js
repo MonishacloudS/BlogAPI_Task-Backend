@@ -18,7 +18,7 @@ function sendNotificationEmail(to, subject, body) {
     // Define email options
     const mailOptions = {
       from: 'monishanode123@outlook.com',
-      to: 'vickynode@gmail.com',
+      to: to,
       subject: subject,
       text: body
     };
