@@ -22,7 +22,7 @@ const cloudinary = require('cloudinary').v2;
 router.use(requireAuth)
 
 
-router.post('/', requireAuth, sendNotificationEmail, (req, res) => {
+router.post('/', requireAuth, (req, res) => {
   const { title, content, category, image_url } = req.body;
 
   const newPost = new Post({
@@ -31,6 +31,9 @@ router.post('/', requireAuth, sendNotificationEmail, (req, res) => {
     category,
     image_url
   });
+
+
+  
 
   cloudinary.config({
     cloud_name: 'dpmo7fx3t',
@@ -112,6 +115,7 @@ router.post('/', requireAuth, sendNotificationEmail, (req, res) => {
         }
       });
       break;
+      
   }
 });
 
