@@ -38,7 +38,7 @@ function sendNotificationEmail(to, subject, body) {
     content: 'This is the content of the new blog post'
   };
   
-  const subscribers = [User];
+  const subscribers = ['monishablognode@hotmail.com', 'monishathagu@gmail.com', 'vemonishabhanu@gmail.com'];
   
   subscribers.forEach((subscriber) => {
     const emailSubject = 'New Blog Post: ' + newBlogPost.title;
