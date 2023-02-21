@@ -22,7 +22,7 @@ const cloudinary = require('cloudinary').v2;
 router.use(requireAuth)
 
 
-router.post('/', requireAuth, (req, res) => {
+router.post('/', requireAuth, sendNotificationEmail, (req, res) => {
   const { title, content, category, image_url } = req.body;
 
   const newPost = new Post({
